@@ -13,11 +13,11 @@ public class RegisterInfoShow {
 
 	public ArrayList<DepartmentDetail> getInfo() {
 		info = new ArrayList<DepartmentDetail>();
-		ArrayList<Department> departmentList = new DepartmentDaoImp().getDepartment();
+		ArrayList<Department> departmentList = (new DepartmentDaoImp()).getDepartment();
 		for(int i=0;i<departmentList.size();i++){
 			DepartmentDetail detail = new DepartmentDetail();
 			detail.setDepartment(departmentList.get(i));
-			ArrayList<Doctor> doctorList = new DoctorDaoImp().
+			ArrayList<Doctor> doctorList = (new DoctorDaoImp()).
 					getDoctorListByDepartment(departmentList.get(i).getDepartment_id());
 			detail.setDoctorList(doctorList);
 			info.add(detail);
