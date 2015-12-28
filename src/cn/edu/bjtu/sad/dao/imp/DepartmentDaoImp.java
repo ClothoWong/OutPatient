@@ -131,10 +131,13 @@ public class DepartmentDaoImp implements DepartmentDao{
 	public ArrayList<Department> getDepartment() {
 		
 		ArrayList<Department> list = new ArrayList<Department>();
-		String sql = "select * from admin_list";
+		String sql = "select * from dempartment";
 		
 		Connection conn = new DBUtilFactory().getConn();
 		try {
+			if(conn==null)
+				System.out.printf("not connected");
+			else{
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while (rs.next()) {
@@ -142,12 +145,12 @@ public class DepartmentDaoImp implements DepartmentDao{
 				
 				// stupid set method......
 				department.setAvaliable_num(rs.getInt("avaliable_num"));
-				department.setDepartment_detail(rs.getString("department_deatil"));
+				department.setDepartment_detail(rs.getString("department_detail"));
 				department.setDepartment_id(rs.getInt("department_id"));
 				department.setDepartment_name(rs.getString("department_name"));
 				
 				list.add(department);
-			}
+			}}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

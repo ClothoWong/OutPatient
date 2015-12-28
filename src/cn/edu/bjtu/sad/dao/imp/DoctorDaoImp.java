@@ -179,7 +179,10 @@ public class DoctorDaoImp implements DoctorDao{
 		Connection conn = new DBUtilFactory().getConn();
 		try {
 			ps = conn.prepareStatement(sql);
+			ps.setInt(1,department_id);
 			rs = ps.executeQuery();
+			if(rs.wasNull())
+				System.out.printf("nonono");
 			while (rs.next()) {
 				Doctor doctor = new Doctor();
 				
