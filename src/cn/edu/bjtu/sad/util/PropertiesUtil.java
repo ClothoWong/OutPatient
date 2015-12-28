@@ -5,78 +5,87 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesUtil {
-	private static String path = null;
-	private static String appId = null;
-	private static String appsecret = null;
-	private static String URL = null;
-	private static String savePath = null;
 	
-	public static String getSavePath(){
-		if(savePath == null){
-			loadProperties();
-		}
-		return savePath;
-	}
+	private static String DataBase = null;
+	private static String DBAddress = null;
+	private static String DBUserName = null;
+	private static String DBPassword = null;
+	private static String DBPort = null;
 	
-	public static String getPath(){
-		if(path == null){
-			loadProperties();
-		}
-		return path;
+	
+
+	public static void loadProperties() {
+		Properties prop = new Properties();
+		try {
+			InputStream is = PropertiesUtil.class.getResourceAsStream("init.properties");
+			prop.load(is);
+			DataBase = prop.getProperty("DataBase");
+			DBAddress = prop.getProperty("DBAddress");
+			DBUserName = prop.getProperty("DBUserName");
+			DBPassword = prop.getProperty("DBPassword");
+			DBPort = prop.getProperty("DBPort");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}              
 	}
 
-	private static void loadProperties() {
-		Properties prop = new Properties();
-		try {
-			InputStream is = PropertiesUtil.class.getResourceAsStream("init.properties");
-			prop.load(is);
-			savePath = prop.getProperty("savePath");
-			path = prop.getProperty("path");
-			appId = prop.getProperty("appId");
-			appsecret = prop.getProperty("appsecret");
-			URL = prop.getProperty("URL");
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}              
+
+
+	public static String getDBAddress() {
+		return DBAddress;
+	}
+
+
+
+	public static void setDBAddress(String dBAddress) {
+		DBAddress = dBAddress;
+	}
+
+
+
+	public static String getDBUserName() {
+		return DBUserName;
+	}
+
+
+
+	public static void setDBUserName(String dBUserName) {
+		DBUserName = dBUserName;
+	}
+
+
+
+	public static String getDBPassword() {
+		return DBPassword;
+	}
+
+
+
+	public static void setDBPassword(String dBPassword) {
+		DBPassword = dBPassword;
+	}
+
+
+
+	public static String getDBPort() {
+		return DBPort;
+	}
+
+
+
+	public static void setDBPort(String dBPort) {
+		DBPort = dBPort;
 	}
 	
-	
-	public static String getAppId(){
-		if(appId == null){
-			loadProperties();
-		}
-		return appId;
+	public static String getDataBase() {
+		return DataBase;
 	}
-	
-	public static String getAppsecret(){
-		if(appsecret == null){
-			loadProperties();
-		}
-		return appsecret;
-	}
-	
-	
-	public static String getURL(){
-		if(URL == null){
-			loadProperties();
-		}
-		return URL;
-	}
-	
-	
-	public static String getToken(){
-		Properties prop = new Properties();
-		try {
-			InputStream is = PropertiesUtil.class.getResourceAsStream("init.properties");
-			prop.load(is);
-			return prop.getProperty("token");
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}              
+
+
+
+	public static void setDataBase(String dataBase) {
+		DataBase = dataBase;
 	}
 }
+	

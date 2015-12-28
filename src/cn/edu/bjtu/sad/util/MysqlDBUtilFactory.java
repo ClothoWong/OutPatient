@@ -24,10 +24,16 @@ public class MysqlDBUtilFactory extends DBUtilAbstractFactory{
 	 */
 	public Connection getConn() {
 		try {
+			System.out.println("url:");
+			PropertiesUtil.loadProperties();
 			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://127.0.0.1:3306/outpatient?useUnicode=true&amp;characterEncoding=UTF-8";
-            String username = "root";
-            String password = "";
+			//String url = "jdbc:mysql://127.0.0.1:3306/outpatient?useUnicode=true&amp;characterEncoding=UTF-8";
+			String url = "jdbc:" + PropertiesUtil.getDataBase() + "://"
+					+ PropertiesUtil.getDBAddress() + ":" + PropertiesUtil.getDBPort()
+					+ "/outpatient?useUnicode=true&amp;characterEncoding=UTF-8";
+			System.out.println(url);
+            String username = PropertiesUtil.getDBUserName();
+            String password = PropertiesUtil.getDBPassword();
             conn = (Connection) DriverManager.getConnection(url, username, password);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
