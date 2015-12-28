@@ -27,6 +27,18 @@ String path = request.getContextPath();
 			<td width="25%" bgcolor="#FFFFFF" align="left">日期</td>
 			<td width="75%" bgcolor="#FFFFFF" align="left">病历</td>
 		</tr>
+		<tr align='center' bgcolor="#FFFFFF"
+			onMouseMove="javascript:this.bgColor='red';"
+			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+			<td width="25%" bgcolor="#FFFFFF" align="left">2015/12/01</td>
+			<td width="75%" bgcolor="#FFFFFF" align="left">肛肠科有癌症</td>
+		</tr>
+		<tr align='center' bgcolor="#FFFFFF"
+			onMouseMove="javascript:this.bgColor='red';"
+			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
+			<td width="25%" bgcolor="#FFFFFF" align="left">2015/12/02</td>
+			<td width="75%" bgcolor="#FFFFFF" align="left">心脏病</td>
+		</tr>
 	</table>
 </body>
 </html>

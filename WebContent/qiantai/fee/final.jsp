@@ -25,8 +25,26 @@ String path = request.getContextPath();
 		<tr align="center" bgcolor="#FAFAF1" height="22">
 			<td width="15%">缴费时间</td>
 			<td width="15%">缴费明细</td>
-			<td width="60%">缴费金额</td>
+			<td width="60%">缴费金额(元)</td>
 			<td width="10%">状态</td>
+		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/20 09:00</td>
+			<td width="15%">药品</td>
+			<td width="60%">100</td>
+			<td width="10%">已交</td>
+		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/20 12:00</td>
+			<td width="15%">检查费</td>
+			<td width="60%">900</td>
+			<td width="10%">已交</td>
+		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/20 21:00</td>
+			<td width="15%">手术费</td>
+			<td width="60%">10000</td>
+			<td width="10%">未交</td>
 		</tr>
 	</table>
 </body>

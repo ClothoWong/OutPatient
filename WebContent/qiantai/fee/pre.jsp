@@ -26,6 +26,24 @@
 			<td width="60%">缴费金额</td>
 			<td width="10%">状态</td>
 		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/20 09:00</td>
+			<td width="15%">药品</td>
+			<td width="60%">100</td>
+			<td width="10%">未交</td>
+		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/20 10:00</td>
+			<td width="15%">检查费</td>
+			<td width="60%">200</td>
+			<td width="10%">已交</td>
+		</tr>
+		<tr align="center" bgcolor="#FAFAF1" height="22">
+			<td width="15%">2015/12/29 11:00</td>
+			<td width="15%">诊疗费</td>
+			<td width="60%">200</td>
+			<td width="10%">已交</td>
+		</tr>
 	</table>
 </body>
 </html>

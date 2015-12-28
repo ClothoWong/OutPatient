@@ -24,7 +24,7 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="25%" bgcolor="#FFFFFF" align="left">姓名:</td>
-			<td width="75%" bgcolor="#FFFFFF" align="left"><input
+			<td width="75%" bgcolor="#FFFFFF" align="left">Alice<input
 				name="name" readonly="readonly"  />
 			</td>
 		</tr>
@@ -32,7 +32,7 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="25%" bgcolor="#FFFFFF" align="left">生日:</td>
-			<td width="75%" bgcolor="#FFFFFF" align="left"><input
+			<td width="75%" bgcolor="#FFFFFF" align="left">1994-10-10<input
 				name="birthday" readonly="readonly" />
 			</td>
 		</tr>
@@ -40,7 +40,7 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="25%" bgcolor="#FFFFFF" align="left">身份证号:</td>
-			<td width="75%" bgcolor="#FFFFFF" align="left"><input
+			<td width="75%" bgcolor="#FFFFFF" align="left">131102199410100629<input
 				name="idcard"  readonly="readonly"/>
 			</td>
 		</tr>
@@ -48,7 +48,7 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="25%" bgcolor="#FFFFFF" align="left">医保卡:</td>
-			<td width="75%" bgcolor="#FFFFFF" align="left"><input
+			<td width="75%" bgcolor="#FFFFFF" align="left">12345677<input
 				name="yibao"  readonly="readonly"/>
 			</td>
 		</tr>
@@ -56,7 +56,7 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="25%" bgcolor="#FFFFFF" align="left">手机号:</td>
-			<td width="75%" bgcolor="#FFFFFF" align="left"><input
+			<td width="75%" bgcolor="#FFFFFF" align="left">18813051642<input
 				name="phone"  readonly="readonly"/>
 			</td>
 		</tr>
@@ -74,8 +74,6 @@ String path = request.getContextPath();
 			onMouseMove="javascript:this.bgColor='red';"
 			onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 			<td width="100%" bgcolor="#FFFFFF" align="left" colspan="2"><input
-				type="hidden" name="yishengId"
-				value="<%=request.getParameter("yishengId")%>" /> <input
 				type="submit" value="解绑医疗卡" />&nbsp;</td>
 		</tr>
 	</table>
