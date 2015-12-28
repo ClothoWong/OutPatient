@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" import="cn.edu.bjtu.sad.facade.*"
+import="cn.edu.bjtu.sad.model.*"%>
 
 <%
 	String path = request.getContextPath();
@@ -18,10 +19,18 @@
 <link href="<%=path%>/css/sitegeneric08.css" rel="stylesheet"
 	type="text/css" />
 <script language="JavaScript" type="text/javascript">
+<%List<DepartmentDetail> list;
+List<Doctor> doctor;%>
+function getValue() {
+	<%
+	RegisterInfoShow show=new RegisterInfoShow();
+	list=show.getInfo();
+	doctor=list.get(0).getDoctorList();%>
+}
     </script>
 </head>
 
-<body style="background-color: #FFF">
+<body style="background-color: #FFF" onload="getValue()">
 
 
 	<div class="mtitle">预约挂号查询</div>
@@ -40,9 +49,9 @@
 							<div class="WinRight"></div>
 						</div>
 					</div>-->
-					<div class="Slot">
+					<div class="Slot"> 
 					</div>
-				</div> -->
+				</div> 
 				<div class="SquarelyGreenContainer">
 					<div class="top">
 						<div class="bgbtop-center">
@@ -62,13 +71,18 @@
 					</div>
 					<div class="Slot">
 						<table border="1" width="98%">
-							<!--  <s:iterator value="#request.keshiList" id="keshi">-->
 							<tr align='left'>
 								<td height="30" width="20%">&nbsp;&nbsp;科室名称：</td>
-								<td>&nbsp;&nbsp;科室简介：<!-- <s:property value="#keshi.keshiJianjie"/>-->
+								<td>&nbsp;&nbsp;科室简介：
 								</td>
 							</tr>
-							<!-- </s:iterator>-->
+							<%for(int i=0;i<list.size();i++){ %>
+							<tr align='left'>
+								<td height="30" width="20%">&nbsp;&nbsp;<%=list.get(i).getDepartment().getDepartment_name() %></td>
+								<td>&nbsp;&nbsp;<%=list.get(i).getDepartment().getDepartment_detail() %>：
+								</td>
+							</tr>
+							<%} %>
 						</table>
 					</div>
 					<div class="BoxHeader">
@@ -80,22 +94,23 @@
 							<tr align="center" bgcolor="#FAFAF1" height="22">
 								<td width="10%">姓名</td>
 								<td width="10%">性别</td>
-								<td width="10%">年龄</td>
-								<td width="60%">简介</td>
+								<td width="10%">评级</td>
+								<td width="60%">评分</td>
 								<td width="10%">操作</td>
 							</tr>
-
+<%for(int m=0;m<doctor.size();m++){ %>
 							<tr align='center' bgcolor="#FFFFFF"
 								onMouseMove="javascript:this.bgColor='red';"
 								onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
-								<td bgcolor="#FFFFFF" align="center"></td>
-								<td bgcolor="#FFFFFF" align="center"></td>
-								<td bgcolor="#FFFFFF" align="center"></td>
-								<td bgcolor="#FFFFFF" align="center"></td>
-								<td bgcolor="#FFFFFF" align="center"><a href="#"
-									onclick="yuyue(<s:property value="#yisheng.yishengId"/> )">预约</a>
+								<td bgcolor="#FFFFFF" align="center"><%=doctor.get(m).getDoctor_name() %></td>
+								<td bgcolor="#FFFFFF" align="center"><%=doctor.get(m).getDoctor_sex() %></td>
+								<td bgcolor="#FFFFFF" align="center"><%=doctor.get(m).getDoctor_level() %></td>
+								<td bgcolor="#FFFFFF" align="center"><%=doctor.get(m).getDoctor_score() %></td>
+								<td bgcolor="#FFFFFF" align="center">
+								<a href="yuyueAdd_re.jsp"> 预约</a>
 								</td>
 							</tr>
+							<%} %>
 
 						</table>
 					</div>

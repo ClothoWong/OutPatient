@@ -28,51 +28,11 @@ String path = request.getContextPath();
   </head>
   
 <body>
-<!-- head如果图片高度不合适。请修改Common.ces里面的".Header .HeaderTop"的高度。和".Header"的高度-->
-<!--<jsp:include flush="true" page="/qiantai/inc/incTop.jsp"></jsp:include>    -->
-<!-- head-->	
 	
 	
 	
 	<div class="mtitle">我的预约挂号查询</div>
 	<br />
-<!--body--><!-- 
-<div align="center" class="Wrapper">
-<div id="MainCenter" align="center" class="MainCenter">
-	     <div id="navigation" class="naivgation">
-				<div class="SquarelyGreenContainer">
-					<div class="top">
-						<div class="bgbtop-center">
-							<span><a href="">用户登陆</a></span>
-							<div class="WinRight"></div>
-						</div>
-					</div>
-					<div class="Slot">
-					    <jsp:include flush="true" page="/qiantai/userlogin/userlogin.jsp"></jsp:include>
-					</div>
-				 </div>
-				 <div class="SquarelyGreenContainer">
-					<div class="top">
-						<div class="bgbtop-center">
-							<span><a href="">网站公告</a></span>
-							<div class="WinRight"></div>
-						</div>
-					</div>
-					<div class="Slot">
-					</div>
-				 </div>
-				<div class="SquarelyGreenContainer">
-					<div class="top">
-						<div class="bgbtop-center">
-							<span><a href="">日历表</a></span>
-							<div class="WinRight"></div>
-						</div>
-					</div>
-					<div class="Slot">
-					    <jsp:include flush="true" page="/qiantai/rili/rili.jsp"></jsp:include>
-					</div>
-				 </div>
-		 </div>-->
 		 <div id="content" class="Sub">
 				<div class="NewContainer770">
 					<div class="BoxHeader">
@@ -86,22 +46,7 @@ String path = request.getContextPath();
 								<td width="60%">备注信息</td>
 								<td width="10%">操作</td>
 					        </tr>	
-							<!--  <s:iterator value="#request.yuyueList" id="yuyue">
-							<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
-								<td bgcolor="#FFFFFF" align="center">
-									 <s:property value="#yuyue.shijian"/>
-								</td>
-								<td bgcolor="#FFFFFF" align="center">
-									 <s:property value="#yuyue.yishengName"/>
-								</td>
-								<td bgcolor="#FFFFFF" align="center">
-									 <s:property value="#yuyue.beizhu"/>
-								</td>
-								<td bgcolor="#FFFFFF" align="center">
-									 <a href="#" onclick="yuyueDelMy(<s:property value="#yuyue.id"/>)">取消</a>
-								</td>
-							</tr>
-							</s:iterator>-->
+							
 						</table>
                     </div>
 				</div>

@@ -53,7 +53,7 @@ String path = request.getContextPath();
 				挂号管理
 			</dt>
 			<dd>
-				<a href="<%=path %>/qiantai/keshi/keshiAll.jsp" target="main">科室预约挂号</a>
+				<a href="<%=path %>/qiantai/yuyue/keshiAll.jsp" target="main">科室预约挂号</a>
 			</dd>
 			<dd>
 				<a href="<%=path %>/qiantai/yuyue/yuyueManaMy.jsp" target="main">我的预约挂号查询</a>
