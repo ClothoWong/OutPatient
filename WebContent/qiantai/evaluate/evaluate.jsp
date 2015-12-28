@@ -27,11 +27,12 @@
 			评价医生
 		</div>	
 		<br />
-		
 		<br />
-		<input type="radio" name="1" value="1"/>极好<br/>
+		<div style="margin-top: 1em;float: left">
+		<input type="radio" name="1" checked="checked" value="1"/>极好<br/>
 		<input type="radio" name="1" value="2"/>满意<br/>
 		<input type="radio" name="1" value="3"/>一般<br/>
 		<input type="radio" name="1" value="4"/>很差<br/>
+		</div>
 	</BODY>
 </html>

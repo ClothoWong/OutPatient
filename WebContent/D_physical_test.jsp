@@ -60,7 +60,7 @@
 							<input name="" type="checkbox" value="15" />血液体检
 							<br />
 							<input name="" type="checkbox" value="16" />尿液体检
-							<input name="" type="checkbox" value="17" />血常规
+							<input name="" type="checkbox" checked="checked" value="17" />血常规
 							<input name="" type="checkbox" value="18" />尿常规
 							<br />
 							<input name="" type="checkbox" value="27" />肿瘤检查
