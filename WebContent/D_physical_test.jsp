@@ -19,7 +19,7 @@
 		<br />
 		<form>
 			<table class="update" style="width:700px;">
-				<tr height="28">
+				<!--  <tr height="28">
 					<td width="100">患者编号:</td>
 					<td><input type="text" name="3992" value="3992"/></td>
 				</tr>
@@ -30,7 +30,7 @@
 				<tr height="28">
 					<td width="100">患者性别:</td>
 					<td><input type="text" name="男" value="男"/></td>
-				</tr>
+				</tr>-->
 				
 				<tr>
 					<td>体检化验选项:</td>	

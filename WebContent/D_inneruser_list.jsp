@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="cn.edu.bjtu.sad.dao.imp.*" import="cn.edu.bjtu.sad.model.*"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -8,39 +8,22 @@
 		<link href="css/style.css" rel="stylesheet" media="screen"
 			type="text/css" />
 		<!-- Use JavaScript script to open a new window display information when preview-->
-		<script>
+		<script language="JavaScript" type="text/javascript">
 			function preview(url) {
 				window.open(url,'Preview','toolbar=no,scrollbars=yes,width=720,height=560,top=50,left=100');
 			}
+			
+			<%List<Patient> list;%>
+			function getValue(){
+			<% PatientDaoImp pa=new PatientDaoImp();
+	        list=pa.getPatientList();%>
+			}
+			
 		</script>
 	</head>
 
-	<body>
-		<!--<div class="mtitle">
-			内部员工列表
-		</div>
-
-		<div class="search">
-		  <div style="float:left;width:600px;">
-			<form>
-				搜索:
-				<input value="姓名/证件号/工号" />
-				&nbsp;&nbsp;
-				<input type="submit" value="Search" class="search-submit"/> <br />
-			</form>		
-		  </div>
-
-		  <div style="float:left;width:180px;">
-			<a href="addCustomer.htm">
-				<img src="images/add.png"  alt="Add Customer" />
-				添加用户
-			</a>
-			<a href="addCustomer.htm">
-				<img src="images/add.png"  alt="Add Customer" />
-				导入用户
-			</a>
-          </div>
-		</div>-->
+	<body onload = "getValue()">
+		
 		<br />
 		<div class="list">
 		  <table>
@@ -57,48 +40,24 @@
 				<th >
 					年龄
 				</th>
-				<th>
-					科室
-				</th>
-					
-				
 			</tr>
+			<%for(int i=0;i<list.size();i++){ %>
 			<tr>
 				<td>
-					3992
+					<%=list.get(i).getHcard_id() %>
 				</td>
 		
 				<td>
-					李立
+					<%=list.get(i).getPatient_name() %>
 				</td>
-				
-				<!--<td class="tdname">
-					<a href="javascript:preview('customerDetail.htm');">医生</a>
-				</td>
-				
-				<td>
-					<a href="edit_inneruser.htm">
-						<img src="images/icon-edit.png"  alt="Edit" />
-						修改
-					</a>
-					| 
-					<a href="">
-						<img src="images/delete.png"  alt="Delete" />
-						删除
-					</a>
-				</td>-->
-				<td>
-					男
+				<td><%=list.get(i).getPatient_sex() %>
+					
 				</td>
 				<td>
-					65
+					<%=list.get(i).getPatient_age() %>
 				</td>
-				<td>
-					外科
-				</td>
-				
 			</tr>
-			
+			<%} %>
 			<tr>
 				<td colspan="7"> </td>
 			</tr>

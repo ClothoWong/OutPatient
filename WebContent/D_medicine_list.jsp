@@ -104,7 +104,7 @@
 		        <tr>
 					<td>患者症状:</td>
 					<td>
-						<textarea rows="4" cols="40" name="content" style="width:500px;height:150px;"></textarea>
+						<textarea rows="4" cols="40" name="content" style="width:630px;height:150px;"></textarea>
 					</td>
 				</tr>
 				<tr height="28">
