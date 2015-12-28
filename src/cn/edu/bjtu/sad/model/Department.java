@@ -1,6 +1,17 @@
 package cn.edu.bjtu.sad.model;
 
+
+/**
+ * Department class description
+ * This Class is the class Entity mapping Department Table.
+ * Include all attributes and all get/set function.
+ * @author sunshine
+ */
 public class Department {
+	
+	public void Operation(){
+		
+	}
 	
 	private int department_id;
 	private String department_name;
